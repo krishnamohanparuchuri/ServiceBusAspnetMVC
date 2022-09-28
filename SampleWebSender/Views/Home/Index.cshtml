@@ -1,0 +1,25 @@
+﻿@model SampleShared.models.Person
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Index" asp-controller="Home" method="POST">
+            <div class="form-group">
+                <label class="form-label">FirstName</label>
+                <input type="text" class="form-control" asp-for="FirstName" placeholder="richard" />
+            </div>
+            <div class="form-group">
+                <label class="form-label">LastName</label>
+                <input type="text" class="form-control" asp-for="LastName" placeholder="johhanberg" />
+            </div>
+            <div class="form-group">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" asp-for="Email" placeholder="resk@test.com" />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
